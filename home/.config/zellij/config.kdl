@@ -1,0 +1,50 @@
+keybinds {
+    resize {
+        bind "j" "Left" { Resize "Increase Left"; }
+        bind "k" "Down" { Resize "Increase Down"; }
+        bind "i" "Up" { Resize "Increase Up"; }
+        bind "l" "Right" { Resize "Increase Right"; }
+        bind "J" { Resize "Decrease Left"; }
+        bind "K" { Resize "Decrease Down"; }
+        bind "I" { Resize "Decrease Up"; }
+        bind "L" { Resize "Decrease Right"; }
+    }
+    pane {
+        bind "j" "Left" { MoveFocus "Left"; }
+        bind "k" "Down" { MoveFocus "Down"; }
+        bind "i" "Up" { MoveFocus "Up"; }
+        bind "l" "Right" { MoveFocus "Right"; }
+    }
+    move {
+        bind "j" "Left" { MovePane "Left"; }
+        bind "k" "Down" { MovePane "Down"; }
+        bind "i" "Up" { MovePane "Up"; }
+        bind "l" "Right" { MovePane "Right"; }
+    }
+    tab {
+        bind "j" "Left" "Up" "i" { GoToPreviousTab; }
+        bind "l" "Right" "Down" "k" { GoToNextTab; }
+    }
+    scroll {
+        bind "i" "Up" { ScrollUp; }      
+        bind "k" "Down" { ScrollDown; }
+    }
+    search {
+        bind "i" "Up" { ScrollUp; }      
+        bind "k" "Down" { ScrollDown; }
+    }
+    tmux {
+        bind "j" "Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "k" "Down" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "i" "Up" { MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "l" "Right" { MoveFocus "Right"; SwitchToMode "Normal"; }    
+    }
+    shared_except "locked" {
+        bind "Alt j" "Alt Left" { MoveFocusOrTab "Left"; }
+        bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
+        bind "Alt k" "Alt Down" { MoveFocus "Down"; }
+        bind "Alt i" "Alt Up" { MoveFocus "Up"; }
+    }
+}
+
+default_shell "nu"

@@ -1,0 +1,7 @@
+alias ll='exa -al'
+alias ls='ls -al'
+alias grep='rg'
+alias cat='bat'
+alias du='dust'
+alias find='fd'
+alias ps='procs'
